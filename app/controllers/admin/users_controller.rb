@@ -17,7 +17,7 @@ class Admin::UsersController < ApplicationController
   end
 
   def create
-    @user = user.new(user_params)
+    @user = User.new(user_params)
 
     if @user.save
       redirect_to admin_user_url(@user), notice: "ユーザー「#{@user.name}」を登録しました。"
